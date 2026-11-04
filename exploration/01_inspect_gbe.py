@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 from scipy.io import loadmat
 
-# load matlib data
+# load MATLAB data
 PROJECT_DIR = Path(__file__).resolve().parents[2]
 DATA_PATH = (
     PROJECT_DIR

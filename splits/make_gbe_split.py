@@ -1,9 +1,9 @@
 """Create the GBE development / hold-out split (run once, 7 Oct 2026).
 
 Split is by participant, so all plays of a participant fall in the same set.
-GBE participant ids are sequential integers 1..47,067 (verified in
-'Data Validation and Repository Notes.md'), so the split needs only the ids,
-not the data. No outcome or rating data were read to make it.
+GBE participant ids are sequential integers 1..47,067 (the notebooks check
+the split against the released ids when loading it), so the split needs only
+the ids, not the data. No outcome or rating data were read to make it.
 """
 import csv, hashlib
 import numpy as np

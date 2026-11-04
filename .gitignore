@@ -1,0 +1,11 @@
+# Raw data are kept outside the repository
+data/
+*.mat
+
+# Python and Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+
+# macOS
+.DS_Store

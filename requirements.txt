@@ -1,0 +1,7 @@
+# Python 3.12 or later
+numpy>=2.2
+scipy
+pandas
+matplotlib
+statsmodels
+patsy
