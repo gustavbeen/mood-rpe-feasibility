@@ -6,17 +6,15 @@ These notebooks reconstruct and check the Great Brain Experiment (GBE) risky-cho
 
 ## Data
 
-The GBE risk task data are available from Dryad (doi:10.5061/dryad.prr4xgxkk) under CC0. The raw data are not included in this repository. The notebooks expect the file at:
-
-```
-../data/raw/gbe/Rutledge_GBE_risk_data_TOD.mat
-```
-
-relative to the repository root, i.e. in a `data/` folder next to the repository.
+The GBE risk task data are available from Dryad (doi:10.5061/dryad.prr4xgxkk) under CC0. The raw data are not included in this repository. Keep the MAT file in a folder of your choice.
 
 ## Setup
 
-Python 3.12 or later. Install the packages in `requirements.txt` and run the notebooks from the `notebooks/` folder.
+Use Python 3.12 or later and install the packages in `requirements.txt`.
+
+1. Copy `config.example.toml` to `config.local.toml` at the repository root.
+2. Set `data_dir` to the folder containing `Rutledge_GBE_risk_data_TOD.mat`. Use an absolute path or a path relative to the config file. The local config is ignored by Git.
+3. Run the notebooks from the `notebooks/` folder. Notebooks 1–5 and the inspection script share the loader in `notebooks/gbe_loader.py`. The script works from any working directory. Notebook 6 uses synthetic data and needs no config.
 
 ## Contents
 

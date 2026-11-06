@@ -1,23 +1,14 @@
 # GBE - looking at a couple of participants / plays for now
 from pathlib import Path
+import sys
 
 import numpy as np
-from scipy.io import loadmat
 
-# load MATLAB data
-PROJECT_DIR = Path(__file__).resolve().parents[2]
-DATA_PATH = (
-    PROJECT_DIR
-    / "data"
-    / "raw"
-    / "gbe"
-    / "Rutledge_GBE_risk_data_TOD.mat"
-)
+# use the same loader as the notebooks
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "notebooks"))
+from gbe_loader import load_gbe
 
-
-mat = loadmat(DATA_PATH, simplify_cells=True)
-
-participants = mat["subjData"]
+participants = load_gbe()
 
 print("Container type:", type(participants))
 print("Number of records:", len(participants))

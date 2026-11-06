@@ -1,0 +1,3 @@
+# Folder containing Rutledge_GBE_risk_data_TOD.mat.
+# Relative paths are resolved from this config file.
+data_dir = "/path/to/gbe-data"
