@@ -18,14 +18,23 @@ Use Python 3.12 or later and install the packages in `requirements.txt`.
 
 ## Contents
 
-| Notebook                    | Content                                                                           |
-| --------------------------- | --------------------------------------------------------------------------------- |
-| `01_understand_gbe`         | Data structure and reward-term reconstruction for example plays                   |
-| `02_validate_gbe`           | Dataset-wide structural checks, constant ratings and slider starting values       |
-| `03_gbe_slider_measurement` | Slider starts, response times and ratings that match the start value              |
-| `04_gbe_reward_intervals`   | Reward intervals between ratings; matching and reward exposure                    |
-| `05_gbe_happiness_model`    | Implementation of the Rutledge et al. (2014) happiness model across task versions |
-| `06_mood_rpe_simulation`    | Provisional mood × RPE model and recovery checks on synthetic data                |
+| Notebook / supporting file  | Content                                                                                                    |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `01_understand_gbe`         | Data structure and reward-term reconstruction for example plays                                            |
+| `02_validate_gbe`           | Dataset-wide structural checks, constant ratings and slider starting values                                |
+| `03_gbe_slider_measurement` | Slider starts, response times and ratings that match the start value                                       |
+| `04_gbe_reward_intervals`   | Reward intervals between ratings; matching and reward exposure                                             |
+| `05_gbe_happiness_model`    | Implementation of the Rutledge et al. (2014) happiness model across task versions                          |
+| `06_mood_rpe_simulation`    | Provisional mood × RPE model and recovery checks on synthetic data                                         |
+| `07_wang_model_validity`    | Wang task specification and model-validity simulations (in progress)                                       |
+| `notebooks/estimator.py`    | Shared fitting function extracted from Notebook 6, returning estimates and clustered uncertainty           |
+| `tests/test_estimator.py`   | Verifies estimator equivalence with Notebook 06, including coefficient estimates and clustered uncertainty |
+
+Run the estimator tests from the repository root:
+
+```bash
+python -m unittest tests/test_estimator.py
+```
 
 `splits/` holds the fixed participant-level development/hold-out split and the script that generated it (see `splits/README.md`). `exploration/` holds an early inspection script.
 
